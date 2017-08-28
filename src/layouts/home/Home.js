@@ -8,12 +8,11 @@ class Home extends Component {
       formSent: false
     }
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.buttonClicked = this.buttonClicked.bind(this);
   }
 
   handleSubmit(e){
     e.preventDefault()
-
+    this.setState({formSent: true})
     fetch('/contact', {
       method: 'POST',
       headers: {
@@ -24,18 +23,12 @@ class Home extends Component {
         email: this.input.value
       })
     })
-    .then((response) => response.json())
-    .then((responseJson) => {
-      console.log(responseJson)
-
+    .then((response) => {
+      return response.json()
     })
     .catch((error) => {
       console.error(error);
     });
-  }
-
-  buttonClicked() {
-    this.setState({formSent: true})
   }
 
   render() {
@@ -80,7 +73,7 @@ class Home extends Component {
                         <div>
                           <label htmlFor="email">Your Email</label>
                           <input id="email" type="email" placeholder="example@example.com" ref={(input) => this.input = input}/>
-                          <button type="submit" className="json-button" onClick={this.buttonClicked}>Request</button>
+                          <button type="submit" className="json-button">Request</button>
                         </div>
                       }
                     </form>
