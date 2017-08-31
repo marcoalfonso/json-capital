@@ -2,10 +2,10 @@ import Dashboard from "../layouts/dashboard/Dashboard.js"
 import { bindActionCreators } from 'redux';
 import { actions } from '../actions/jsnActions.js';
 import { connect } from 'react-redux';
-import web3 from "../web3.js"
-//import store from '../store'
+//import web3 from "../web3.js"
+import store from '../store'
 
-//let web3 = store.getState().web3.web3Instance
+let web3 = store.getState().web3.web3Instance
 
 function mapStateToProps(state, props) {
   return {

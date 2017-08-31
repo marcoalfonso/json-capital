@@ -5,12 +5,17 @@ class SignUpForm extends Component {
     super(props)
 
     this.state = {
-      name: ''
+      name: '',
+      password: ''
     }
   }
 
   onInputChange(event) {
     this.setState({ name: event.target.value })
+  }
+
+  onPasswordInputChange(event) {
+    this.setState({ password: event.target.value })
   }
 
   handleSubmit(event) {
@@ -21,6 +26,11 @@ class SignUpForm extends Component {
       return alert('Please fill in your name.')
     }
 
+    if (this.state.password !== 'json-capital')
+    {
+      return alert('Please enter the correct password.')
+    }
+
     this.props.onSignUpFormSubmit(this.state.name)
   }
 
@@ -28,10 +38,11 @@ class SignUpForm extends Component {
     return(
       <form className="pure-form" onSubmit={this.handleSubmit.bind(this)}>
         <fieldset>
-          <input id="name" type="text" value={this.state.name} onChange={this.onInputChange.bind(this)} placeholder="Name" />
+          <input id="name" type="text" value={this.state.name} onChange={this.onInputChange.bind(this)} placeholder="Account" />
+          <input id="password" type="text" value={this.state.password} onChange={this.onPasswordInputChange.bind(this)} placeholder="Password" />
           <span className="pure-form-message">This is a required field.</span>
           <br />
-          <button type="submit" className="json-button">Sign in</button>
+          <button type="submit" className="json-button">Login in</button>
         </fieldset>
       </form>
     )
