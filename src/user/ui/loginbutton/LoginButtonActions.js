@@ -1,7 +1,7 @@
 import AuthenticationContract from '../../../../build/contracts/Authentication.json'
 import { browserHistory } from 'react-router'
 import store from '../../../store'
-import web3 from "../../../../src/web3"
+// import web3 from "../../../../src/web3"
 
 const contract = require('truffle-contract')
 
@@ -14,7 +14,7 @@ function userLoggedIn(user) {
 }
 
 export function loginUser() {
-  // let web3 = store.getState().web3.web3Instance
+  let web3 = store.getState().web3.web3Instance
 
   // Double-check web3's status.
   if (typeof web3 !== 'undefined') {

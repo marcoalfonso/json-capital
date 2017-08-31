@@ -30,9 +30,9 @@ class App extends Component {
 
     const OnlyGuestLinks = HiddenOnlyAuth(() =>
       <span>
-        <li className="pure-menu-item">
+        {/*<li className="pure-menu-item">
           <Link to="/signup" className="pure-menu-link">Sign Up</Link>
-        </li>
+        </li>*/}
         <LoginButtonContainer />
       </span>
     )
@@ -58,10 +58,10 @@ class App extends Component {
               </svg>
               <a className="pure-menu-heading" href="/">JSON Capital</a>
             </div>
-            {/*<ul className="pure-menu-list">
+            <ul className="pure-menu-list">
               <OnlyGuestLinks />
               <OnlyAuthLinks />
-            </ul>*/}
+            </ul>
           </div>
         </div>
         {this.props.children}

@@ -1,6 +1,7 @@
 import { connect } from 'react-redux'
 import LoginButton from './LoginButton'
 import { loginUser } from './LoginButtonActions'
+import { browserHistory } from 'react-router'
 
 const mapStateToProps = (state, ownProps) => {
   return {}
@@ -12,6 +13,7 @@ const mapDispatchToProps = (dispatch) => {
       event.preventDefault();
 
       dispatch(loginUser())
+      //browserHistory.push('/signup')
     }
   }
 }
