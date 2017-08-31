@@ -5,7 +5,7 @@ class SignUp extends Component {
   render() {
     return(
       <div className="splash">
-        <main className="container">
+        <main>
           <div className="pure-g">
             <div className="pure-u-1-1">
               <h1>Login</h1>
