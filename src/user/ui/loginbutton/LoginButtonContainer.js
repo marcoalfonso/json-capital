@@ -12,8 +12,8 @@ const mapDispatchToProps = (dispatch) => {
     onLoginUserClick: (event) => {
       event.preventDefault();
 
-      dispatch(loginUser())
-      //browserHistory.push('/signup')
+      //dispatch(loginUser())
+      browserHistory.push('/signup')
     }
   }
 }
