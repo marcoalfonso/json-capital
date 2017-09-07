@@ -37,7 +37,7 @@ app.post('/contact', function (req, res) {
 
   transporter.sendMail({
     from: req.body.email,
-    to: 'marco@hackerfirm.com',
+    to: 'contact@json.capital',
     subject: 'Request of information for JSON Capital',
     text: req.body.email
   }, function (err, info) {

@@ -1,0 +1,12 @@
+<svg id="logo" viewBox="0 0 209 209" width="100%" height="100%">
+  <title>Group</title>
+  <desc>Created using Figma</desc>
+  <g transform="translate(375 376)">
+    <g transform="rotate(90 105 -271)" fill="#333333">
+      <path id="a" fillRule="evenodd" d="M181 28H28v153h153V28zM28 0H0v209h209V0H28z"></path>
+    </g>
+    <g transform="rotate(-135 -138.306 -49.502)" fill="#ffffff">
+      <path id="c" d="M0 0h223.304v28H0V0z"></path>
+    </g>
+  </g>
+</svg>

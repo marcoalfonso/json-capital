@@ -2,24 +2,24 @@ import Dashboard from "../layouts/dashboard/Dashboard.js"
 import { bindActionCreators } from 'redux';
 import { actions } from '../actions/jsnActions.js';
 import { connect } from 'react-redux';
-//import web3 from "../web3.js"
-import store from '../store'
 
-let web3 = store.getState().web3.web3Instance
-
-function mapStateToProps(state, props) {
+const mapStateToProps = state => {
   return {
     balance: state.metacoin.balance,
     balanceJsn: state.jsn.balance,
-    transactions: state.metacoin.transactions
-  };
-}
-function mapDispatchToProps(dispatch) {
-  return {
-    fetchData: () => dispatch(actions.fetchBalance(web3.eth.accounts[0])),
-    onSubmit: ({receiver, amount}) =>
-      dispatch(actions.send(receiver, amount)),
-    ...bindActionCreators(actions, dispatch)
+    transactions: state.metacoin.transactions,
+    web3: state.web3.web3Instance,
+    allAmount: state.jsn.allAmount,
+    freeAmount: state.jsn.freeAmount
   }
 }
+
+const mapDispatchToProps = dispatch => {
+  return {
+    fetchData: account => dispatch(actions.fetchBalance(account)),
+    fetchAllAmount: account => dispatch(actions.fetchAllAmount(account)),
+    fetchFreeAmount: account => dispatch(actions.fetchFreeAmount(account))
+  }
+}
+
 export default connect(mapStateToProps, mapDispatchToProps)(Dashboard);

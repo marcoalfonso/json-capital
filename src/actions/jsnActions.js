@@ -1,8 +1,9 @@
 import web3 from "../web3";
 import JSN from "../jsn";
-const SET_BALANCE = 'SET_BALANCE';
-const RECEIVE_TRANSACTION = 'RECEIVE_TRANSACTION';
-
+const SET_BALANCE = 'SET_BALANCE'
+const RECEIVE_TRANSACTION = 'RECEIVE_TRANSACTION'
+const SET_TOTAL_AMOUNT = 'SET_TOTAL_AMOUNT'
+const SET_FREE_AMOUNT = 'SET_FREE_AMOUNT'
 export const actions = {
   setBalance: (balance) => {
     return {
@@ -11,10 +12,17 @@ export const actions = {
     };
   },
 
-  receiveTransaction: (transaction) => {
+  setTotalAmount: (allAmount) => {
     return {
-      type: RECEIVE_TRANSACTION,
-      transaction,
+      type: SET_TOTAL_AMOUNT,
+      allAmount,
+    };
+  },
+
+  setFreeAmount: (freeAmount) => {
+    return {
+      type: SET_FREE_AMOUNT,
+      freeAmount,
     };
   },
 
@@ -28,17 +36,21 @@ export const actions = {
     }
   },
 
-  send: function(address, amount) {
+  fetchAllAmount: function(account) {
     return (dispatch, getState) => {
       JSN.then((jsn) => {
-        jsn.sellCoin(
-            address,
-            amount,
-            { from: web3.eth.accounts[1] }
-          ).then((result) => {
-            console.log(result)
-        }).catch(function(e) {
-          console.log(e)
+        jsn.getTotalSupply.call({ from: account }).then((allAmount) => {
+          dispatch(this.setTotalAmount(allAmount.valueOf()))
+        })
+      })
+    }
+  },
+
+  fetchFreeAmount: function(account) {
+    return (dispatch, getState) => {
+      JSN.then((jsn) => {
+        jsn.getFreeToken.call({ from: account }).then((freeAmount) => {
+          dispatch(this.setFreeAmount(freeAmount.valueOf()))
         })
       })
     }

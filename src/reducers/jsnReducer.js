@@ -1,21 +1,38 @@
-const SET_BALANCE = 'SET_BALANCE';
-const RECEIVE_TRANSACTION = 'RECEIVE_TRANSACTION';
+const SET_BALANCE = 'SET_BALANCE'
+const RECEIVE_TRANSACTION = 'RECEIVE_TRANSACTION'
+const SET_TOTAL_AMOUNT = 'SET_TOTAL_AMOUNT'
+const SET_FREE_AMOUNT = 'SET_FREE_AMOUNT'
 
-export default function reducer(state = {
+// The initial application state
+let initialState = {
   balance: 0,
-  transactions: [],
-  }, action = {}) {
+  allAmount: 0,
+  freeAmount: 0
+}
+
+const jsnReducer = (state = initialState, action) => {
   switch (action.type) {
-    case (SET_BALANCE):
+    case SET_BALANCE:
       return {
         ...state,
-        balance: action.balance,
+        balance: action.balance
       }
-    case (RECEIVE_TRANSACTION):
+
+    case SET_TOTAL_AMOUNT:
       return {
         ...state,
-        transactions: [...state.transactions, action.transaction],
+        allAmount: action.allAmount
       }
-    default: return state;
+
+    case SET_FREE_AMOUNT:
+      return {
+        ...state,
+        freeAmount: action.freeAmount
+      }
+
+    default:
+      return state
   }
 }
+
+export default jsnReducer
