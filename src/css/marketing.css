@@ -189,6 +189,7 @@ a.pure-button-primary {
     font-weight: 100;
     border-radius: 5px;
     line-height: 1.2em;
+    margin-bottom: 30px;
 }
 
 /* This is the subheading that appears on the blue section */
@@ -283,7 +284,7 @@ a.pure-button-primary {
     to work with */
     .splash {
         width: 50%;
-        height: 50%;
+        height: 65%;
     }
 
     .splash-head {

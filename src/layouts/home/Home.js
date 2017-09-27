@@ -39,8 +39,9 @@ class Home extends Component {
               <div className="t-grid__grid"></div>
             </div>
             <div className="splash">
-                <h1 className="splash-head">The most exclusive blockchain hedge fund</h1>
+                <h1 className="splash-head">Consensus-based blockchain hedge fund</h1>
                 <p className="splash-subhead">
+                    The most exclusive blockchain hedge fund.<br/><br/>
                     Professional Investors and Entrepreneurs driving innovation based on Blockchain technology.
                 </p>
                 <div className="section__footer">
