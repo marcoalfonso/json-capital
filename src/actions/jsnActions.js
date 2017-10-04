@@ -54,5 +54,17 @@ export const actions = {
         })
       })
     }
+  },
+
+  transferJsn: function(account1, account2, transferAmmount) {
+    return (dispatch, getState) => {
+      JSN.then((jsn) => {
+        jsn.transfer(account2, transferAmmount, {from: account1, gasPrice: 20000000000, gas: 3000000}).then(() => {
+          dispatch(this.fetchBalance(account1))
+          dispatch(this.fetchAllAmount(account1))
+          dispatch(this.fetchFreeAmount(account1))
+        })
+      })
+    }
   }
 }

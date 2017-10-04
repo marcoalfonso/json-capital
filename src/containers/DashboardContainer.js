@@ -18,7 +18,10 @@ const mapDispatchToProps = dispatch => {
   return {
     fetchData: account => dispatch(actions.fetchBalance(account)),
     fetchAllAmount: account => dispatch(actions.fetchAllAmount(account)),
-    fetchFreeAmount: account => dispatch(actions.fetchFreeAmount(account))
+    fetchFreeAmount: account => dispatch(actions.fetchFreeAmount(account)),
+    onDashboardTransferSubmit: (account1, account2, transferAmmount) => {
+      dispatch(actions.transferJsn(account1, account2, transferAmmount))
+    }
   }
 }
 
