@@ -32,7 +32,7 @@ ReactDOM.render((
       <Router history={history}>
         <Route path="/" component={AppContainer}>
           <IndexRoute component={Home} />
-          <Route path="dashboard" component={UserIsAuthenticated(DashboardContainer)} />
+          <Route path="dashboard" component={DashboardContainer} />
           <Route path="signup" component={UserIsNotAuthenticated(SignUp)} />
           <Route path="profile" component={UserIsAuthenticated(Profile)} />
         </Route>

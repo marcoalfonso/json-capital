@@ -287,6 +287,10 @@ a.pure-button-primary {
         height: 65%;
     }
 
+    .splash.login-page {
+      height: 50%;
+    }
+
     .splash-head {
         font-size: 250%;
     }

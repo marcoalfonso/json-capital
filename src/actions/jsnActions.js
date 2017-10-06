@@ -4,7 +4,16 @@ const SET_BALANCE = 'SET_BALANCE'
 const RECEIVE_TRANSACTION = 'RECEIVE_TRANSACTION'
 const SET_TOTAL_AMOUNT = 'SET_TOTAL_AMOUNT'
 const SET_FREE_AMOUNT = 'SET_FREE_AMOUNT'
+const SET_ETHEREUM_ACCOUNT = 'SET_ETHEREUM_ACCOUNT'
+
 export const actions = {
+  setEthereumAccount: (ethereumAccount) => {
+    return {
+      type: SET_ETHEREUM_ACCOUNT,
+      ethereumAccount,
+    };
+  },
+
   setBalance: (balance) => {
     return {
       type: SET_BALANCE,

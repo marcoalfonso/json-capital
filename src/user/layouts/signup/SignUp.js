@@ -4,13 +4,12 @@ import SignUpFormContainer from '../../ui/signupform/SignUpFormContainer'
 class SignUp extends Component {
   render() {
     return(
-      <div className="splash">
+      <div className="splash login-page">
         <main>
           <div className="pure-g">
             <div className="pure-u-1-1">
               <h1>Login</h1>
-              <p>Enter your account to login</p>
-              <p>*Metamask connected to the main ethereum network required</p>
+              <p>Enter your Ethereum address to login</p>
               <SignUpFormContainer />
             </div>
           </div>

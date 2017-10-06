@@ -5,12 +5,11 @@ import { connect } from 'react-redux';
 
 const mapStateToProps = state => {
   return {
-    balance: state.metacoin.balance,
     balanceJsn: state.jsn.balance,
-    transactions: state.metacoin.transactions,
     web3: state.web3.web3Instance,
     allAmount: state.jsn.allAmount,
-    freeAmount: state.jsn.freeAmount
+    freeAmount: state.jsn.freeAmount,
+    account: state.jsn.ethereumAccount
   }
 }
 
