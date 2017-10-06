@@ -3,7 +3,9 @@ import SignUpForm from './SignUpForm'
 import { signUpUser } from './SignUpFormActions'
 
 const mapStateToProps = (state, ownProps) => {
-  return {}
+  return {
+    web3: state.web3.web3Instance
+  }
 }
 
 const mapDispatchToProps = (dispatch) => {
