@@ -5,10 +5,19 @@ import store from '../../../store'
 
 const contract = require('truffle-contract')
 
+export const USER_LOGGED_IN = 'USER_LOGGED_IN'
+function userLoggedIn(user) {
+  return {
+    type: USER_LOGGED_IN,
+    payload: user
+  }
+}
+
 export function signUpUser(address) {
   return function(dispatch) {
     // dispatch(setEthereumAccount(address))
     dispatch(actions.setEthereumAccount(address))
+    dispatch(userLoggedIn({"name": address}))
     browserHistory.push('/dashboard')
   }
 }

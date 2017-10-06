@@ -11,7 +11,7 @@ contract JSNToken is StandardToken {
 
     uint public decimals = 18;
 
-    uint public INITIAL_SUPPLY = 6000;
+    uint public INITIAL_SUPPLY = 6000000;
     uint public INITIAL_EXCHANGE_RATE = 1000;
 
     uint public EMISSION_RATE = 1000;
