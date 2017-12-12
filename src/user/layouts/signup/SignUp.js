@@ -9,7 +9,7 @@ class SignUp extends Component {
           <div className="pure-g">
             <div className="pure-u-1-1">
               <h1>Login</h1>
-              <p>Enter your Ethereum address to login</p>
+              <p>Enter your Ethereum address to login *Metamask required</p>
               <SignUpFormContainer />
             </div>
           </div>

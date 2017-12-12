@@ -1,4 +1,3 @@
-import web3 from "../web3";
 import JSN from "../jsn";
 const SET_BALANCE = 'SET_BALANCE'
 const RECEIVE_TRANSACTION = 'RECEIVE_TRANSACTION'
