@@ -466,7 +466,7 @@ a.pure-button-primary {
     .t-grid {
         height: 1100px;
         -webkit-perspective: 500px;
-        perspective: 500px
+        perspective: 1000px;
     }
     .t-grid__grid {
         height: 100%;
