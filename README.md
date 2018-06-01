@@ -1,8 +1,3 @@
 # JSON CAPITAL
 
-## FAQ
-
-* __What is JSON CAPITAL?__
-
-    The highest return blockchain hedge fund on the market.
-
+JSON CAPITAL has built an unrivaled network of entrepreneurs, advisors, and limited partners who are on the front lines of this fast moving sector of Fintech. The principals of the firm believe that Blockchain technology is a profound invention that offers a better, faster, cheaper way to move money and exchange assets without counterparty risk.

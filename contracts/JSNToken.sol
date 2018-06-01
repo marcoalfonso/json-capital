@@ -11,7 +11,8 @@ contract JSNToken is StandardToken {
 
     uint public decimals = 18;
 
-    uint public INITIAL_SUPPLY = 6000000;
+    uint public INITIAL_SUPPLY = 6000000 * (10 ** decimals);
+
     uint public INITIAL_EXCHANGE_RATE = 1000;
 
     uint public EMISSION_RATE = 1000;
@@ -25,7 +26,7 @@ contract JSNToken is StandardToken {
     uint exchangeRate;
 
     function JSNToken(address initialAccount){
-        totalSupply = INITIAL_SUPPLY * 10 ** uint256(decimals);
+        totalSupply = INITIAL_SUPPLY;
         owner = msg.sender;
         balances[msg.sender] = INITIAL_SUPPLY;
         exchangeRate = INITIAL_EXCHANGE_RATE;
