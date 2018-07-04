@@ -41,7 +41,7 @@ class Home extends Component {
             <div className="splash">
                 <h1 className="splash-head">Consensus-based blockchain hedge fund</h1>
                 <p className="splash-subhead">
-                    The most exclusive blockchain hedge fund.<br/><br/>
+                    Invite only blockchain based hedge fund.<br/><br/>
                     Professional Investors and Entrepreneurs driving innovation based on Blockchain technology.
                 </p>
                 <div className="section__footer">
@@ -80,10 +80,21 @@ class Home extends Component {
                     </form>
 
                 </div>
+
+            </div>
+            <div className="short-section" id="logo-section">
+              <div className="short-section-header-wrapper">
+                <h6 className="homepage-media-feature-title">Active Investments and Advisories</h6>
+              </div>
+              <div className="wrapper w-container">
+                <a href="https://current.us/" rel="external"><div className="current-logo"></div></a>
+                <a href="https://svandis.io/" rel="external"><div className="svandis-logo"></div></a>
+                <a href="https://energypremier.com//" rel="external"><div className="energy-premier-logo"></div></a>
+              </div>
             </div>
 
             <div className="footer l-box is-center">
-                © JSON Capital.
+                © JSON Capital
             </div>
 
         </div>
